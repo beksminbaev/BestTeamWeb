@@ -1,36 +1,56 @@
+:root {
+  --primary-color-yellow: #fed136;
+}
+
+body {
+  font-family: "Roboto Slab", serif !important;
+}
+
 * {
-  box-sizing: border-box;
   margin: 0;
-  padding: 0;
+  box-sizing: border-box;
 }
-.header {
+header {
   background-image: url(https://learn.seytech.co/assets/projects/html-css/projects/1-agency/assets/img/header-bg.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
   background-size: cover;
-  height: 700px;
-}
-.team {
-  background-color: #f8f9fa;
+  background-position: center;
+  height: 110vh;
 }
 .showcase {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 50vh;
+  height: 80vh;
 }
 .showcase h1 {
   font-size: 70px;
   font-weight: bold;
   font-family: "Roboto Slab", serif !important;
-  letter-spacing: 5px;
+  letter-spacing: 3px;
 }
-.row .one {
+
+.showcase p {
+  font-size: 40px;
+}
+
+.icons .fas {
+  border: 1px solid var(--primary-color-yellow);
+  border-radius: 50% 50%;
   width: 120px;
   height: 120px;
-  background-color: rgba(254, 209, 54, 0.9);
-  color: #fff;
+}
+
+.nav a:hover {
+  color: var(--primary-color-yellow);
+}
+
+.services {
+  padding: 70px;
+}
+
+.services h3 {
+  font-weight: bold;
 }
 
 .portfolio-team {
@@ -50,8 +70,8 @@
   font-style: italic;
 }
 /* .portfolio-content a:hover{
-      opacity: 0.5;
-  } */
+    opacity: 0.5;
+} */
 .cross {
   position: relative;
 }
@@ -61,87 +81,86 @@
   width: 100%;
   height: auto;
   transition: 0.5s ease;
-  /* backface-visibility: hidden; */
+  backface-visibility: hidden;
 }
 .middle {
-  transition: 0.5s ease;
-  background-color: rgba(254, 209, 54, 0.9);
+  /* transition: .5s ease; */
   opacity: 0;
   position: absolute;
-  top: 0;
-  left: 0;
-  /* transform: translate(-50%, -50%); */
-  text-align: center;
-  display: flex;
   width: 100%;
   height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #fed136;
+  /* transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%); */
+  text-align: center;
+  display: flex;
   align-items: center;
   justify-content: center;
 }
 .text {
   color: white;
-  /* font-size: 16px; */
+
   padding: 16px 32px;
 }
 .card:hover .cross {
   opacity: 1;
 }
-
 .card:hover .middle {
   opacity: 0.9;
 }
 
+/* logo pics */
+#logos-id {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-template-rows: 1fr;
+
+  grid-auto-flow: column;
+}
 .contact {
-    background-image: url("https://wallpapercave.com/wp/wp3172894.jpg");
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
+  background-image: url("https://wallpapercave.com/wp/wp3172894.jpg");
+  background-size: cover;
+  background-position: center;
 }
 .labels input {
-    line-height: 3rem;
+  line-height: 3rem;
 }
 
-.bottom-links a {
-  text-decoration: none;
-}
-.bottom-links a:hover {
-  border-bottom: solid;
+.footer-style {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 720px) {
   .portfolio-content {
-    display: flex !important;
-    flex-direction: column !important;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    width: 90%;
+    justify-items: center;
+    margin: auto;
   }
-
   #logos-id {
-    display: flex !important;
-    flex-direction: column !important;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+  }
+  .footer-style {
+    flex-direction: column;
     align-items: center;
   }
-  #logos-id a {
-    margin: 20px;
+  .footer-style div {
+    margin: 10px;
   }
-  .footer {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center;
+}
+
+@media screen and (max-width: 520px) {
+  #logos-id {
+    grid-template-rows: repeat(4, 1fr);
   }
-
-  .footer > div {
-    margin-top: 20px;
+  #logos-id div {
+    margin: auto;
+    padding: 10px;
   }
-
-  .labels {
-     display: flex !important;
-     flex-direction: column !important;    
- }
-
- .labels textarea {
-     margin-top: 20px;
- }
-
- .contact {
-     height: 100vh;
-     background-image: cover !important;
- }
+}
