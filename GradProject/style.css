@@ -90,3 +90,58 @@
 .card:hover .middle {
   opacity: 0.9;
 }
+
+.contact {
+    background-image: url("https://wallpapercave.com/wp/wp3172894.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+.labels input {
+    line-height: 3rem;
+}
+
+.bottom-links a {
+  text-decoration: none;
+}
+.bottom-links a:hover {
+  border-bottom: solid;
+}
+
+@media screen and (max-width: 800px) {
+  .portfolio-content {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
+  #logos-id {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center;
+  }
+  #logos-id a {
+    margin: 20px;
+  }
+  .footer {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center;
+  }
+
+  .footer > div {
+    margin-top: 20px;
+  }
+
+  .labels {
+     display: flex !important;
+     flex-direction: column !important;    
+ }
+
+ .labels textarea {
+     margin-top: 20px;
+ }
+
+ .contact {
+     height: 100vh;
+     background-image: cover !important;
+ }

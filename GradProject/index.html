@@ -37,7 +37,7 @@
         <!-- Navbar -->
         <nav
           class="
-            navbar navbar-expand-sm navbar-dark
+            navbar navbar-expand-md navbar-dark
             bg-transparent
             py-3
             sticky-top
@@ -344,8 +344,8 @@
         </section>
       </section>
       <!-- Logos -->
-      <section class="logos">
-        <div class="container d-flex justify-content-evenly py-5">
+      <section class="logos py-5">
+        <div class="container d-flex justify-content-evenly" id="logos-id">
           <a href="">
             <img
               src="https://learn.seytech.co/assets/projects/html-css/projects/1-agency/assets/img/logos/envato.jpg"
@@ -372,53 +372,79 @@
           </a>
         </div>
       </section>
-      <section class="contacts text-center">
-        <h1><b>CONTACT US</b></h1>
-        <p class="text-muted">
-          <i>Lorem ipsum dolor sit amet consectetur.</i>
-        </p>
-        <div class="container d-flex justify-content-evenly">
-          <div class="left">
-            <!-- 1 -->
-            <div class="mb-3">
+      <!-- Contacts -->
+      <section class="contact">
+        <div class="container py-5">
+          <h1 class="text-center text-light mt-5">CONTACT US</h1>
+          <p class="text-center text-muted fst-italic mb-5">
+            Lorem ipsum dolor sit amet.
+          </p>
+          <div class="labels d-flex justify-content-evenly align-items-start">
+            <div class="left w-100 mx-3">
               <input
-                type="name"
-                class="form-control form-control-lg col-lg-1"
-                id="exampleFormControlInput1"
-                placeholder="Your Name*"
+                class="form-control form-control-lg text-capitalize text-muted"
+                type="text"
+                placeholder="your name*"
+                aria-label=".form-control-lg example"
               />
-            </div>
-            <!-- 2 -->
-            <div class="mb-3">
               <input
+                class="form-control form-control-lg text-capitalize my-3"
                 type="email"
-                class="form-control form-control-lg"
-                id="exampleFormControlInput1"
-                placeholder="Your Email*"
+                placeholder="your email*"
+                aria-label=".form-control-lg example"
+              />
+              <input
+                class="form-control form-control-lg text-capitalize"
+                type="text"
+                placeholder="your phone*"
+                aria-label=".form-control-lg example"
               />
             </div>
-            <!-- 3 -->
-            <div class="mb-3">
-              <input
-                type="number"
-                class="form-control form-control-lg"
-                id="exampleFormControlInput1"
-                placeholder="Your Number*"
-              />
+            <div class="right w-100 mx-3">
+              <div class="form-floating">
+                <textarea
+                  class="form-control"
+                  placeholder="Leave a comment here"
+                  id="floatingTextarea2"
+                  style="height: 228px"
+                ></textarea>
+                <label
+                  for="floatingTextarea2"
+                  class="text-capitalize text-muted"
+                  >your message*</label
+                >
+              </div>
             </div>
           </div>
-          <div class="right">
-            <div class="mb-3">
-              <textarea
-                class="form-control"
-                id="exampleFormControlTextarea1"
-                rows="10"
-                column="5"
-              ></textarea>
-            </div>
+          <div class="d-flex justify-content-center mt-5">
+            <button
+              type="button"
+              class="btn btn-warning btn-lg text-light fw-bold p-3 px-5"
+            >
+              SEND MESSAGE
+            </button>
           </div>
         </div>
       </section>
+      <!-- FOOTER -->
+      <footer class="footer d-flex justify-content-evenly py-4">
+        <div>Copyright &copy; Seytech 2020</div>
+        <div class="mx-5">
+          <a href="#" class="btn btn-dark rounded-circle mx-2"
+            ><i class="fab fa-twitter"></i
+          ></a>
+          <a href="#" class="btn btn-dark rounded-circle mx-2"
+            ><i class="fab fa-facebook-f p-1"></i
+          ></a>
+          <a href="#" class="btn btn-dark rounded-circle mx-2"
+            ><i class="fab fa-linkedin-in"></i
+          ></a>
+        </div>
+        <div class="bottom-links">
+          <a href="#" class="text-warning m-2">Privacy Policy</a>
+          <a href="#" class="text-warning">Terms of Use</a>
+        </div>
+      </footer>
     </main>
   </body>
 </html>
